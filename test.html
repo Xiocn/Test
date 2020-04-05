@@ -1,0 +1,66 @@
+<!-- 1. -->
+<!-- 项目：小程序国皓教育 
+    项目目标：页面目标：四个主界面：学习页 课程报名页，我的，首页
+             功能目标：搜索功能，需要显示搜索历史。
+                      课程报名：选择学习课程报名支付。
+                      学习：进入课程观看视频学习，视频进度条不能拖动，不能快进，有学习记录。
+                      校园考试：学习完课程进入考试进行考试。
+    技术选型：原生开发
+    技术难点：
+    解决方案：
+-->
+<!-- 2. -->
+<!-- HTTP的响应头，请求头中有与缓存控制相关的字段
+    响应头：Expires：过期时间   当HTTP再次请求时，如果没有超过这个时间就会从缓存中读取信息
+            cache-Control
+            Last-Modified:检查缓存与服务端是否一致
+            Etag:服务端资源 -->
+<!-- 3. -->
+<!-- 根据题意得知，n为0有0种方法，n=1有1种方法,n=2有2种方法
+        n   f(n)
+        1   1
+        2   2
+        3   3
+        4   5
+        5   8
+    该规律遵循斐波那切数列-->
+<script>
+    function Feibo(n) {
+        var sum = 0;
+        var num1 = 1,
+            num2 = 2;
+        if (n <= 0) {
+            return 0;
+        }
+        if (n == 1) {
+            return 1;
+        }
+        if (n == 2) {
+            return 2;
+        }
+        for (var i = 3; i <= n; ++i) {
+            sum = num1 + num2;
+            num1 = num2;
+            num2 = sum;
+        }
+        return sum;
+    }
+    console.log(Feibo(10));
+</script>
+<!-- 4. -->
+<script>
+    function Square(n) {
+        var result = 0;
+        if (n >= 1) {
+            result = Math.sqrt(n);
+            return result;
+        }
+    }
+    console.log(Square(1))
+</script>
+<!-- 5. -->
+<!--  -->
+<script>
+    function Search() {
+    }
+</script>
